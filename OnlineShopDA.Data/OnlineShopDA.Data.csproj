@@ -52,6 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="OnlineShopDADbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +71,13 @@
       <Project>{b4585ad2-6232-4732-b737-e7217c34b6ad}</Project>
       <Name>OnlineShopDA.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineShopDA.Model\OnlineShopDA.Model.csproj">
+      <Project>{604a9f64-c69f-4025-92ed-74b5f94110c6}</Project>
+      <Name>OnlineShopDA.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
